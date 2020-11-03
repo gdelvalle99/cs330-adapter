@@ -1,3 +1,5 @@
+// Guillermo Del Valle and Eryl Kenner
+
 public class Main {
     public static void main(String[] args){
         Guitar guitar = new Guitar();
@@ -6,7 +8,7 @@ public class Main {
         danceInterface.Step(DanceController.direction.LEFT);
         DanceAdapter guitarInterface = new DanceAdapter(dance);
         guitarInterface.PressFretButton(GuitarController.colors.BLUE);
-        
+
         
     }
 }
