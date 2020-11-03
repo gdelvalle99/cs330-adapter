@@ -1,7 +1,12 @@
 public class Main {
     public static void main(String[] args){
         Guitar guitar = new Guitar();
-        GuitarAdapter dance = new GuitarAdapter(guitar);
-        dance.Step(DanceController.direction.LEFT);
+        Dance dance = new Dance();
+        GuitarAdapter danceInterface = new GuitarAdapter(guitar);
+        danceInterface.Step(DanceController.direction.LEFT);
+        DanceAdapter guitarInterface = new DanceAdapter(dance);
+        guitarInterface.PressFretButton(GuitarController.colors.BLUE);
+        
+        
     }
 }
