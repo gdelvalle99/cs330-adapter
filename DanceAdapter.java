@@ -6,25 +6,25 @@ public class DanceAdapter implements GuitarController{
     }
     public void PressFretButton(colors button){
         if(button == GuitarController.colors.GREEN){
-            dance.PressFretButton(GuitarController.colors.GREEN);
+            dance.Step(DanceController.direction.LEFT);
         }
-        else if(button == DanceController.direction.LEFT){
-            guitar.PressFretButton(GuitarController.colors.RED);
+        else if(button == GuitarController.colors.RED){
+            dance.Step(DanceController.direction.RIGHT);
         }
-        else if(dir == DanceController.direction.BACK){
-            guitar.PressFretButton(GuitarController.colors.BLUE);
+        else if(button == GuitarController.colors.BLUE){
+            dance.Step(DanceController.direction.BACK);
         }
-        else if(dir == DanceController.direction.FORWARD){
-            guitar.PressFretButton(GuitarController.colors.YELLOW);
+        else if(button == GuitarController.colors.YELLOW){
+            dance.Step(DanceController.direction.FORWARD);
         }
-        else if(dir == DanceController.direction.MIDDLE){
-            guitar.PressFretButton(GuitarController.colors.ORANGE);
+        else if(button == GuitarController.colors.ORANGE){
+            dance.Step(DanceController.direction.MIDDLE);
         }
     }
     public void PressPick(){
-
+        throw new UnsupportedOperationException();
     }
     public void PressTremelo(){
-        
+        throw new UnsupportedOperationException();
     }
 }
